@@ -1,14 +1,29 @@
 <div id="post_content">
 	<h1 class="title">
 		<%= @post.title %>
-	</h1>
+	</h1><br>
 
-	<p class ="date">
-		Submitted <%= time_ago_in_words(@post.created_at) %> Ago
-	</p>
+	<button class="button"> 
+		<%= link_to "Edit", edit_post_path(@post) %>
+	</button>
+
+	<button class="button"> 
+	<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: 'You Sure Bro !!!'} %>
+	</button>
+
+	<button class="button"> 
+		<%= link_to "Back", root_path %>
+	</button>
+
 
 	<p class="content">
 		<%= @post.content %>
 	</p>
+
+	<p class="date">
+		Submitted <%= time_ago_in_words(@post.created_at) %> ago
+	</p>
+
+	
 </div>
 
