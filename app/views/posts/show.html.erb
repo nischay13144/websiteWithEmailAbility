@@ -24,6 +24,11 @@
 		Submitted <%= time_ago_in_words(@post.created_at) %> ago
 	</p>
 
-	
+	<div id="comments">
+		<h2><%= pluralize(@post.comments.count, "Comment") %></h2>
+		<%= render @post.comments %>
+		<h3>Add a Comment</h3>
+		<%= render "comments/form" %>
+	</div>
 </div>
 
