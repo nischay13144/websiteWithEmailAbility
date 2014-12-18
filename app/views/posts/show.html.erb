@@ -2,7 +2,13 @@
 	<h1 class="title">
 		<%= @post.title %>
 	</h1><br>
-	<% if user_signed_in? %>
+	
+	<p class="content">
+		<%= @post.content %>
+	</p>
+
+
+	<% if @post.user == current_user %>
 		<button class="button"> 
 			<%= link_to "Edit", edit_post_path(@post) %>
 		</button>
@@ -17,9 +23,7 @@
 	</button>
 
 
-	<p class="content">
-		<%= @post.content %>
-	</p>
+	
 
 	<p class="date">
 		Submitted <%= time_ago_in_words(@post.created_at) %> ago
