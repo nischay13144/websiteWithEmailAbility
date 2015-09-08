@@ -34,7 +34,9 @@ gem 'devise', '~> 3.4.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+gem 'rufus-scheduler', '~> 3.1.4'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'whenever', require: false
+gem 'actionmailer', '~> 4.1.5'
