@@ -1,0 +1,39 @@
+<div id="post_content">
+	<h1 class="title">
+		<%= @post.title %>
+	</h1><br>
+	
+	<p class="content">
+		<%= @post.content %>
+	</p>
+
+
+	<% if @post.user == current_user %>
+		<button class="button"> 
+			<%= link_to "Edit", edit_post_path(@post) %>
+		</button>
+
+		<button class="button"> 
+		<%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: 'You Sure Bro !!!'} %>
+		</button>
+	<% end %>
+
+	<button class="button"> 
+		<%= link_to "Back", root_path %>
+	</button>
+
+
+	
+
+	<p class="date">
+		Submitted <%= time_ago_in_words(@post.created_at) %> ago
+	</p>
+
+	<div id="comments">
+		<h2><%= pluralize(@post.comments.count, "Comment") %></h2>
+		<%= render @post.comments %>
+		<h3>Add a Comment</h3>
+		<%= render "comments/form" %>
+	</div>
+</div>
+
