@@ -33,7 +33,14 @@ Rails.application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  after "deploy:symlink", "deploy:update_crontab"
 
+namespace :deploy do
+  desc "Update the crontab file"
+  task :update_crontab, :roles => :db do
+    run "cd #{release_path} && whenever --update-crontab #{application}"
+  end
+end
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
