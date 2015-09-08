@@ -6568,6 +6568,7 @@ Started GET "/assets/3.jpg" for 127.0.0.1 at 2015-09-08 02:53:37 +0530
 UserMailer#digest_email_update: processed outbound mail in 8.0ms
 
 UserMailer#digest_email_update: processed outbound mail in 8.0ms
+<<<<<<< HEAD
 
 UserMailer#digest_email_update: processed outbound mail in 8.0ms
 
@@ -7091,3 +7092,5 @@ UserMailer#digest_email_update: processed outbound mail in 9.8ms
 UserMailer#digest_email_update: processed outbound mail in 14.3ms
 
 UserMailer#digest_email_update: processed outbound mail in 8.1ms
+=======
+>>>>>>> 9bd951db6f5ade244967a74a2c768012eb73eafa
