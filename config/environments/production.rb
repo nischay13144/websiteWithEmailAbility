@@ -77,7 +77,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
-<<<<<<< HEAD
+
   after "deploy:symlink", "deploy:update_crontab"
 
 namespace :deploy do
@@ -86,9 +86,7 @@ namespace :deploy do
     run "cd #{release_path} && whenever --update-crontab #{application}"
   end
 end
-  
-=======
->>>>>>> 9bd951db6f5ade244967a74a2c768012eb73eafa
+
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end

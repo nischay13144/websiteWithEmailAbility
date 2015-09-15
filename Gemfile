@@ -40,3 +40,5 @@ gem 'rufus-scheduler', '~> 3.1.4'
 
 gem 'whenever', require: false
 gem 'actionmailer', '~> 4.1.5'
+gem 'activeadmin', '~> 1.0.0.pre1'
+gem 'ransack'
